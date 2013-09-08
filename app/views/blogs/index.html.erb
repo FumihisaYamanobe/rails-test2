@@ -1,0 +1,7 @@
+<h1>Blogs</h1>
+<%= link_to "New add", "#" %>
+<% @blogs.each do |blog| %>
+<ul>
+  <li><%= blog.title %></li>
+</ul>
+<% end %>
