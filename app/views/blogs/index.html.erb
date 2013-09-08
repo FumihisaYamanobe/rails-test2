@@ -1,7 +1,14 @@
 <h1>Blogs</h1>
-<%= link_to "New add", "#" %>
+<p>
+<%= link_to "New add", new_blog_path %>
+</p>
+<p>
 <% @blogs.each do |blog| %>
 <ul>
-  <li><%= blog.title %></li>
+  <li>
+    <%= link_to blog.title, blog_path(blog.id) %>
+    # <%= link_to "[del]", blog, method: :delete %>
+  </li>
 </ul>
 <% end %>
+</p>
